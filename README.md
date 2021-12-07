@@ -1,17 +1,17 @@
 # Stealy Steve's Auto Stealer App
 
 ### Install the packages
-"""
+```
 npm install
-"""
+```
 ### Run the local dev server
-"""
+```
 npm run start
-"""
+```
 ### Run the local dev server w/ NodeMon
-"""
+```
 npm run dev
-"""
+```
 
 ### Navigate in browser
 Open a web browser and navigate to localhost:8000 to see Stealy Steve's Slick Auto Stealer Interface.
