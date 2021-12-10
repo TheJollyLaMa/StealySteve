@@ -17,11 +17,12 @@ app.set("views", path.join(__dirname, "views"));
 */
 app.get('/home', (req, res) => {
     var dataToSend;
+    var menu_choice = 4
     // spawn new child process to call the python script
     // const python = spawn('python', ['script2.py', 'node.js', 'python']);
     // Mega Dovetail to class objective: FileI/O - file call from node with child spawn
     // TODO: call to Stealy Steve's Python script in a child process in index.js express server
-    const stealyStevePythonProgram = spawn('python', ['script2.py']);
+    const stealyStevePythonProgram = spawn('python3', ['A7.py', menu_choice, 'Argument_2']);
 
     // collect data from script
     // python.stdout.on('data', function (data) {

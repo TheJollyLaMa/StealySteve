@@ -11,23 +11,26 @@
 #         Fillout ReadMe.md with installation instructions to run local server
 
 # import car class
-# import sys # get the sys.argv
+import sys # get the sys.argv
 import StealySteve as StealySteve
-import script2 as web
-web_sent_val = web.sys.argv[1]
+# print(sys.argv)
+# print('# Hello from python #')
+# print('First param: '+sys.argv[1]+'#')
+# print('Second param: '+sys.argv[2]+'#')
+web_sent_val = sys.argv[1]
+sent_val = '0'
 print(web_sent_val)
 #
 # define program loop
 def main():
     """... Stealy Steve's main loop prints a menu and calls the necessary functionality for Stealy Steve to run his shady car lot."""
     # init menu loop sentinel value
-    sent_val = ""
     # this would be an entry point for the node app I do believe ....
     # TODO: sent_val = sys.argv[1]   - first argument put into the call to the script will be the menu option
     # TODO: prototype menu option "4", display vehicles, with node through Cyclic .
     # This would be a reasonable stopping point and a good enough proof of concept for me :)
     # loop until sentinel value is given as input
-    while sent_val != '9' || web_sent_val != '9':
+    while sent_val != '9' or web_sent_val != '9':
         # print an unwelcome message
         StealySteve.print_menu()
         sent_val = input("\n\tWell, what are you here for❓ ")
@@ -57,7 +60,7 @@ def main():
             print("\n\t✅ Vehicle deleted from inventory. ✅\n")
 
         # display the entire inventory of cars
-        elif sent_val == '4' || web_sent_val == '4':
+        elif sent_val == '4' or web_sent_val == '4':
             StealySteve.display_vehicle_inventory()
 
         #  TODO: Load function
