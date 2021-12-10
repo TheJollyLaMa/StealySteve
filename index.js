@@ -21,7 +21,7 @@ app.get('/home', (req, res) => {
     // const python = spawn('python', ['script2.py', 'node.js', 'python']);
     // Mega Dovetail to class objective: FileI/O - file call from node with child spawn
     // TODO: call to Stealy Steve's Python script in a child process in index.js express server
-    const stealyStevePythonProgram = spawn('python', ['A7.py']);
+    const stealyStevePythonProgram = spawn('python', ['script2.py']);
 
     // collect data from script
     // python.stdout.on('data', function (data) {

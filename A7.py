@@ -1,17 +1,21 @@
-#for final addition-
-    # TODO: Learning goal: get familiar with and attempt to deploy with Cyclic
-    # TODO: Learning goal: practice with git
-    # Use node and express to set up a server index.js - ::: with CYCLIC :::
-    # Route an index.html for Stealy Steve's Homepage
-    # call to this Python script in a child process in index.js express server
-    # TODO: Call Stealy Steve's main menu and demonstrate the power and proof of concept  of (Node & Python) + (Git & Cyclic) by linking the 'Display Inventory' function
-    # Route the remaining functioning
-        # Add, Edit, Delete, Search, Save, Load forms to pass to this Python backend
-        # Fillout ReadMe.md with installation instructions to run local server
+# for final addition-
+#     TODO: Learning goal: get familiar with and attempt to deploy with Cyclic
+#     TODO: Learning goal: practice with git
+#     Use node and express to set up a server index.js - ::: with CYCLIC :::
+#     Route an index.html for Stealy Steve's Homepage
+#     call to this Python script in a child process in index.js express server
+#     TODO: OBJECTIVE: Call Stealy Steve's main menu and demonstrate the power and proof of concept of
+#                      (Node & Python) + (Git & Cyclic) by linking the 'Display Inventory' function
+#     Route the remaining functioning
+#         Add, Edit, Delete, Search, Save, Load forms to pass to this Python backend
+#         Fillout ReadMe.md with installation instructions to run local server
 
 # import car class
-import sys # get the sys.argv
+# import sys # get the sys.argv
 import StealySteve as StealySteve
+import script2 as web
+web_sent_val = web.sys.argv[1]
+print(web_sent_val)
 #
 # define program loop
 def main():
@@ -23,7 +27,7 @@ def main():
     # TODO: prototype menu option "4", display vehicles, with node through Cyclic .
     # This would be a reasonable stopping point and a good enough proof of concept for me :)
     # loop until sentinel value is given as input
-    while sent_val != '9':
+    while sent_val != '9' || web_sent_val != '9':
         # print an unwelcome message
         StealySteve.print_menu()
         sent_val = input("\n\tWell, what are you here for❓ ")
@@ -53,7 +57,7 @@ def main():
             print("\n\t✅ Vehicle deleted from inventory. ✅\n")
 
         # display the entire inventory of cars
-        elif sent_val == '4':
+        elif sent_val == '4' || web_sent_val == '4':
             StealySteve.display_vehicle_inventory()
 
         #  TODO: Load function

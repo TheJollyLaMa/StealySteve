@@ -1,7 +1,6 @@
 import os # just for SEEK_SET to search inventory file for duplicate
 import json
 # car class - make, model, vin, mileage, price, features [dict]
-
 class Car:
     """This is a class defining what a Car is to Stealy Steve."""
     # global vehicle inventory
